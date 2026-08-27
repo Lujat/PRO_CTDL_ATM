@@ -28,12 +28,17 @@ void themtk(){
     cin >> id;
     string defaultpin= "123456";
     ofstream fileTheTu("TheTu.txt", ios::app);
-    fileTheTu << id << " " << defaultpin << endl;
+    cout << endl;
+    fileTheTu <<  id << " " << defaultpin << endl;
     fileTheTu.close();
-
+    string tenFileTaiKhoan = id + ".txt";
+    ofstream fileTaiKhoan(tenFileTaiKhoan);
+    cout<< endl;
+    fileTaiKhoan << "ID: " << id << endl;
+    fileTaiKhoan << "PIN: " << defaultpin << endl;
 }
 int main(){
-    //hienthiTheTu();
+    hienthiTheTu();
     themtk();
     return 0;
 }
